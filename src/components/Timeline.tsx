@@ -1,0 +1,28 @@
+import type { Itinerary } from '../engine/itinerary'
+import { formatClock, formatDuration } from '../engine/time'
+
+export function Timeline({ itinerary }: { itinerary: Itinerary }) {
+  return (
+    <div className="timeline">
+      {itinerary.legs.map((leg, i) => {
+        const minutes = leg.endMinutes - leg.startMinutes
+        return (
+          <div key={i} className={`tl tl--${leg.kind}`}>
+            <span className="tl__time num">{formatClock(leg.startMinutes)}</span>
+            <span className="tl__dot" aria-hidden="true" />
+            <div className="tl__title">
+              {leg.title}
+              {minutes > 0 && (
+                <span className="faint" style={{ fontWeight: 500, marginLeft: 6 }}>
+                  {formatDuration(minutes)}
+                  {leg.estimated ? ' est.' : ''}
+                </span>
+              )}
+            </div>
+            <div className="tl__detail">{leg.detail}</div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}

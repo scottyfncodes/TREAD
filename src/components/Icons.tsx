@@ -72,8 +72,8 @@ export const IconMap = (p: P) => (
 export function TreadMark({ className }: { className?: string }) {
   return (
     <svg className={className} viewBox="0 0 64 64" aria-hidden="true">
-      <circle cx="32" cy="32" r="29" fill="#151a1f" stroke="#2dd4bf" strokeWidth="4" />
-      <g fill="none" stroke="#2dd4bf" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
+      <circle cx="32" cy="32" r="29" fill="#151a1f" stroke="#fb923c" strokeWidth="4" />
+      <g fill="none" stroke="#fb923c" strokeWidth="5" strokeLinecap="round" strokeLinejoin="round">
         <path d="M20 22l8 7-8 7" />
         <path d="M31 22l8 7-8 7" opacity="0.75" />
       </g>

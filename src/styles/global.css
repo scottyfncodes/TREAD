@@ -13,10 +13,10 @@
   --text-dim: #b6c0c7;
   --text-faint: #7f8b94;
 
-  /* Brand: trail teal, with a warm sandstone second colour. */
-  --brand: #2dd4bf;
-  --brand-ink: #062320;
-  --brand-soft: rgb(45 212 191 / 14%);
+  /* Brand: trail orange, with a warm sandstone second colour. */
+  --brand: #fb923c;
+  --brand-ink: #2a1203;
+  --brand-soft: rgb(251 146 60 / 14%);
   --sand: #e9c46a;
   --sand-soft: rgb(233 196 106 / 14%);
 
@@ -62,7 +62,7 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(80% 45% at 85% -5%, rgb(45 212 191 / 10%), transparent 60%),
+    radial-gradient(80% 45% at 85% -5%, rgb(251 146 60 / 10%), transparent 60%),
     radial-gradient(70% 40% at 0% 105%, rgb(233 196 106 / 7%), transparent 65%),
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240'%3E%3Cg fill='none' stroke='%23ffffff' stroke-opacity='0.025' stroke-width='1'%3E%3Cpath d='M-20 60 C40 20 90 100 150 60 S250 40 270 70'/%3E%3Cpath d='M-20 90 C40 50 90 130 150 90 S250 70 270 100'/%3E%3Cpath d='M-20 150 C50 120 100 190 160 150 S250 130 270 160'/%3E%3Cpath d='M-20 185 C50 155 100 225 160 185 S250 165 270 195'/%3E%3C/g%3E%3C/svg%3E");
   pointer-events: none;
@@ -147,7 +147,7 @@ button:disabled { cursor: default; opacity: 0.5; }
 .card--tap { transition: transform 120ms ease, border-color 120ms ease; }
 .card--tap:active { transform: scale(0.99); border-color: var(--line); }
 .card--flat { background: var(--bg-2); }
-.card--brand { border-color: rgb(45 212 191 / 45%); background: linear-gradient(160deg, rgb(45 212 191 / 12%), var(--surface) 60%); }
+.card--brand { border-color: rgb(251 146 60 / 45%); background: linear-gradient(160deg, rgb(251 146 60 / 12%), var(--surface) 60%); }
 .card--sand { border-color: rgb(233 196 106 / 40%); background: linear-gradient(160deg, rgb(233 196 106 / 10%), var(--surface) 60%); }
 .card__row > div { min-width: 0; }
 .card__row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
@@ -155,7 +155,7 @@ button:disabled { cursor: default; opacity: 0.5; }
 .hero {
   border-radius: 22px; padding: 20px 18px; margin: 14px 0; position: relative; overflow: hidden;
   background: linear-gradient(145deg, #13302c, #121a20 55%, #1a1812);
-  border: 1px solid rgb(45 212 191 / 25%);
+  border: 1px solid rgb(251 146 60 / 25%);
 }
 .hero h1 { font-size: clamp(26px, 7.5vw, 34px); font-weight: 850; }
 .hero p { color: var(--text-dim); margin: 8px 0 0; }
@@ -174,7 +174,7 @@ button:disabled { cursor: default; opacity: 0.5; }
 .chips--scroll .chip { white-space: nowrap; max-width: none; }
 button.chip, a.chip { min-height: 38px; padding: 6px 14px; }
 .chip[aria-pressed='true'] { background: var(--brand-soft); border-color: var(--brand); color: var(--text); }
-.chip--brand { background: var(--brand-soft); border-color: rgb(45 212 191 / 50%); color: var(--text); }
+.chip--brand { background: var(--brand-soft); border-color: rgb(251 146 60 / 50%); color: var(--text); }
 .chip--sand { background: var(--sand-soft); border-color: rgb(233 196 106 / 45%); color: var(--sand); }
 .chip--ok { color: var(--ok); border-color: rgb(74 222 128 / 40%); background: rgb(74 222 128 / 10%); }
 .chip--caution { color: var(--caution); border-color: rgb(244 185 66 / 45%); background: rgb(244 185 66 / 10%); }
@@ -188,7 +188,7 @@ button.chip, a.chip { min-height: 38px; padding: 6px 14px; }
 }
 .basis--official { color: var(--info); border-color: rgb(125 211 252 / 35%); }
 .basis--community { color: var(--sand); border-color: rgb(233 196 106 / 35%); }
-.basis--user { color: var(--brand); border-color: rgb(45 212 191 / 35%); }
+.basis--user { color: var(--brand); border-color: rgb(251 146 60 / 35%); }
 .basis--estimate { color: var(--unknown); border-color: rgb(167 139 250 / 35%); }
 .basis--vehicle_spec { color: var(--text-dim); }
 

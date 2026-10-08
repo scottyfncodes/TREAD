@@ -8,6 +8,8 @@ import { formatDuration } from '../engine/time'
 import type { SeasonVerdict } from '../engine/season'
 import { FitChip } from './VehicleFit'
 import { IconChevron } from './Icons'
+import { Landscape } from './Landscape'
+import { sceneFor } from './scenes'
 
 const KIND_LABEL: Record<Adventure['kind'], string> = {
   ohv_route: 'Off-road route',
@@ -25,6 +27,8 @@ export function AdventureCard({
   transitMinutes,
   transitMiles,
   reasons = [],
+  scenic = false,
+  showFit = true,
   onOpen,
 }: {
   adventure: Adventure
@@ -33,11 +37,16 @@ export function AdventureCard({
   transitMinutes?: number | null
   transitMiles?: number | null
   reasons?: string[]
+  /** Lead with a landscape of the place's country (the home screen does). */
+  scenic?: boolean
+  /** Hide the fit chip, e.g. when there is no vehicle to compare yet. */
+  showFit?: boolean
   onOpen: () => void
 }) {
   const region = REGIONS_BY_ID[adventure.regionId]
   return (
-    <button type="button" className="card card--tap" onClick={onOpen}>
+    <button type="button" className={scenic ? 'card card--tap card--scenic' : 'card card--tap'} onClick={onOpen}>
+      {scenic && <Landscape scene={sceneFor(adventure)} align="middle" className="card__art" />}
       <div className="card__row">
         <div style={{ minWidth: 0 }}>
           <div className="eyebrow">
@@ -54,7 +63,7 @@ export function AdventureCard({
       </div>
 
       <div className="chips" style={{ marginTop: 10 }}>
-        <FitChip assessment={assessment} />
+        {showFit && <FitChip assessment={assessment} />}
         {adventure.difficulty && (
           <span className={`chip ${['very_difficult', 'extreme'].includes(adventure.difficulty.level) ? 'chip--blocker' : adventure.difficulty.level === 'difficult' ? 'chip--caution' : ''}`}>
             {DIFFICULTY_LABEL[adventure.difficulty.level]}

@@ -41,10 +41,18 @@ function tab(name: string) {
 }
 
 describe('new user', () => {
-  it('is welcomed with a vehicle-first question and no assumed vehicle or location', () => {
-    render(<App />)
-    expect(screen.getByText('What can you do with the vehicle you have?')).toBeTruthy()
-    expect(screen.getByRole('button', { name: 'Add my vehicle' })).toBeTruthy()
+  it('is welcomed with the promise, landscapes of real places and one vehicle-first action', () => {
+    const { container } = render(<App />)
+    expect(screen.getByRole('heading', { level: 1, name: /Tell us what you drive\. We’ll show you where it can go\./ })).toBeTruthy()
+    // The hero and each place to start lead with a landscape of its country.
+    expect(container.querySelector('.hero svg[data-scene]')).toBeTruthy()
+    expect(container.querySelectorAll('.card--scenic svg[data-scene]').length).toBeGreaterThan(0)
+    // One primary action, docked in reach of a thumb; browsing is secondary.
+    const dock = screen.getByRole('group', { name: 'Get started' })
+    expect(within(dock).getByRole('button', { name: 'Add my vehicle' }).className).toContain('btn--primary')
+    expect(within(dock).getByRole('button', { name: 'Just browse' }).className).not.toContain('btn--primary')
+    // With no vehicle yet, cards do not repeat "No vehicle selected".
+    expect(screen.queryByText('No vehicle selected')).toBeNull()
     expect(screen.queryByText(/With your/)).toBeNull()
   })
 
@@ -56,9 +64,10 @@ describe('new user', () => {
 
   it('can skip onboarding and browse, with the start shown as not set', () => {
     render(<App />)
-    fireEvent.click(screen.getByRole('button', { name: 'Just browse for now' }))
+    fireEvent.click(screen.getByRole('button', { name: 'Just browse' }))
     expect(screen.getByText('Not set')).toBeTruthy()
     expect(screen.getByText('Add a vehicle')).toBeTruthy()
+    expect(screen.queryByRole('group', { name: 'Get started' })).toBeNull()
   })
 })
 
@@ -79,6 +88,10 @@ describe('vehicle creation through the form', () => {
     await act(async () => fireEvent.click(save))
     expect(screen.getByText('With your 2024 Subaru Outback')).toBeTruthy()
     expect(screen.getByText('AWD')).toBeTruthy()
+    // Back home with a vehicle: matched places, with their fit, and no welcome dock.
+    expect(screen.queryByRole('group', { name: 'Get started' })).toBeNull()
+    expect(screen.getByText('Good places to start')).toBeTruthy()
+    expect(screen.getAllByText(/Appears compatible|Vehicle considerations|Likely beyond this vehicle|Add details to check/).length).toBeGreaterThan(0)
   })
 
   it('supports several vehicles and switching between them in the garage', async () => {

@@ -13,6 +13,7 @@ import { ContextBar } from '../components/ContextBar'
 import { AdventureCard } from '../components/AdventureCard'
 import { WeatherPanel } from '../components/WeatherPanel'
 import { SectionTitle } from '../components/Bits'
+import { Landscape } from '../components/Landscape'
 import { IconChevron, IconFlag, TreadMark } from '../components/Icons'
 import { suggestedTripName } from '../engine/tripPlan'
 
@@ -32,7 +33,7 @@ export function Home({ go }: { go: Go }) {
   const isNew = vehicles.length === 0 && !onboarded
 
   return (
-    <div>
+    <div className={isNew ? 'home--docked' : undefined}>
       <header className="masthead">
         <div>
           <div className="wordmark">
@@ -46,18 +47,14 @@ export function Home({ go }: { go: Go }) {
       {!online && <div className="banner">Offline. Saved trips still open; live weather, place search and maps need a signal.</div>}
 
       {isNew ? (
-        <section className="hero" aria-label="Get started">
-          <div className="eyebrow" style={{ color: 'var(--brand)' }}>Welcome</div>
-          <h1 style={{ marginTop: 6 }}>What can you do with the vehicle you have?</h1>
-          <p>Add your vehicle -- year, make, model -- and TREAD will show which adventures it suits, and why. It takes about twenty seconds.</p>
-          <div className="sheet-actions" style={{ marginTop: 14 }}>
-            <button type="button" className="btn btn--primary" onClick={() => go('vehicle/new')}>
-              Add my vehicle
-            </button>
-            <button type="button" className="btn btn--ghost" onClick={finishOnboarding}>
-              Just browse for now
-            </button>
-          </div>
+        // First run leads with where a vehicle can go, not a form. The
+        // actions sit in the dock at the bottom, in reach of a thumb.
+        <section className="hero hero--scene" aria-label="Welcome">
+          <Landscape scene="arch" sky={64} rig className="hero__art" />
+          <h1 className="hero__copy">
+            Tell us what you drive. <span className="hero__accent">We’ll show you where it can go.</span>
+          </h1>
+          <p className="hero__sub">Scenic drives, backroads and 4x4 trails, each checked against your vehicle.</p>
         </section>
       ) : (
         <ContextBar go={go} />
@@ -129,6 +126,8 @@ export function Home({ go }: { go: Go }) {
           transitMinutes={d.transitMinutes}
           transitMiles={d.transitMiles}
           reasons={d.reasons}
+          scenic
+          showFit={activeVehicle !== null}
           onOpen={() => go(`adventure/${d.adventure.id}`)}
         />
       ))}
@@ -187,6 +186,19 @@ export function Home({ go }: { go: Go }) {
         {Object.keys(ADVENTURES_BY_ID).length} researched adventures. Every figure carries a source and a check date, community information is labelled
         as such, and anything that could not be verified says UNKNOWN.
       </p>
+
+      {isNew && (
+        <div className="dock" role="group" aria-label="Get started">
+          <div className="dock__inner">
+            <button type="button" className="btn btn--primary" onClick={() => go('vehicle/new')}>
+              Add my vehicle
+            </button>
+            <button type="button" className="btn btn--ghost" onClick={finishOnboarding}>
+              Just browse
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

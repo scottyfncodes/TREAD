@@ -151,6 +151,8 @@ button:disabled { cursor: default; opacity: 0.5; }
 .card--sand { border-color: rgb(233 196 106 / 40%); background: linear-gradient(160deg, rgb(233 196 106 / 10%), var(--surface) 60%); }
 .card__row > div { min-width: 0; }
 .card__row { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; }
+.card--scenic { overflow: hidden; padding-top: 0; }
+.card__art { display: block; width: calc(100% + 32px); height: 96px; margin: 0 -16px 12px; }
 
 .hero {
   border-radius: 22px; padding: 20px 18px; margin: 14px 0; position: relative; overflow: hidden;
@@ -159,6 +161,33 @@ button:disabled { cursor: default; opacity: 0.5; }
 }
 .hero h1 { font-size: clamp(26px, 7.5vw, 34px); font-weight: 850; }
 .hero p { color: var(--text-dim); margin: 8px 0 0; }
+
+/* First-run hero: the landscape is the frame, the line sits in its sky. */
+.hero--scene { padding: 0; background: var(--surface); border-color: rgb(251 146 60 / 30%); }
+.hero__art { display: block; width: 100%; height: 256px; }
+.hero--scene .hero__copy {
+  position: absolute; top: 0; left: 0; right: 0; margin: 0; padding: 20px 18px;
+  font-size: clamp(27px, 7.4vw, 36px); font-weight: 850; text-shadow: 0 1px 14px rgb(0 0 0 / 40%);
+}
+.hero__accent { display: block; color: var(--brand); }
+.hero--scene .hero__sub { margin: 0; padding: 14px 18px 16px; font-size: 15px; }
+
+/* Landscapes come alive at rest: one rig crawling along the road. */
+.scene__rig { animation: scene-drive 30s linear -10s infinite; }
+.scene__dust { transform-box: fill-box; transform-origin: right center; animation: scene-dust 0.8s ease-in-out infinite alternate; }
+@keyframes scene-drive { from { transform: translateX(-40px); } to { transform: translateX(440px); } }
+@keyframes scene-dust { from { opacity: 0.55; transform: scaleX(0.8); } to { opacity: 1; transform: scaleX(1.15); } }
+
+/* First-run actions, docked above the tab bar in the thumb zone. */
+.home--docked { padding-bottom: 72px; }
+.dock {
+  position: fixed; left: 0; right: 0; bottom: calc(65px + env(safe-area-inset-bottom)); z-index: 49;
+  padding: 14px var(--gutter) 10px;
+  background: linear-gradient(to top, rgb(11 14 17 / 97%) 72%, rgb(11 14 17 / 0%));
+}
+.dock__inner { display: flex; gap: 8px; max-width: calc(var(--max) - 2 * var(--gutter)); margin: 0 auto; }
+.dock .btn--primary { flex: 1; font-size: 17px; }
+.dock .btn--ghost { width: auto; flex: none; padding: 12px 16px; color: var(--text-dim); }
 
 /* ------------------------------------------------------------------ chips */
 
@@ -358,6 +387,10 @@ details.more > .more__body { padding: 0 16px 14px; }
 .sheet-actions { display: grid; gap: 8px; }
 
 @media (min-width: 600px) {
+  .hero__art { height: 380px; }
+  .hero--scene .hero__copy { right: 16%; padding: 28px 26px; font-size: 32px; }
+  .hero--scene .hero__sub { padding: 16px 26px 18px; }
+  .card__art { height: 112px; }
   .cat-grid { grid-template-columns: repeat(4, 1fr); }
   .stats { grid-template-columns: repeat(4, 1fr); }
 }
@@ -368,4 +401,6 @@ details.more > .more__body { padding: 0 16px 14px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
+  .scene__rig { animation: none; transform: translateX(150px); }
+  .scene__dust { animation: none; }
 }

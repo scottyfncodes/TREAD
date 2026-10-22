@@ -479,7 +479,7 @@ function driveDetail(segment: DriveSegment): string {
     `${formatMeasure(segment.miles, 'mi', { decimals: 1 })} · ${ROAD_CLASS_LABEL[segment.roadClass]} · ${VEHICLE_LABEL[segment.vehicle]}`,
   ]
   if (segment.notes) parts.push(segment.notes)
-  return parts.join(' — ')
+  return parts.join('. ')
 }
 
 function hikeDetail(hike: Hike, minutes: Measure): string {
@@ -528,7 +528,7 @@ export function shortRoad(via: string): string {
 function foodDetail(food: FoodStop): string {
   const bits = [food.town]
   if (food.address) bits.push(food.address)
-  bits.push(food.hoursNote ?? 'Hours not verified — check before you go.')
+  bits.push(food.hoursNote ?? 'Hours not verified. Check before you go.')
   return bits.join(' · ')
 }
 

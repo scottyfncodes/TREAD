@@ -75,7 +75,7 @@ const adventures: Adventure[] = [
     ],
     hazards: [
       'Snow over the high sections until early July',
-      'Width limits on some side trails -- wide vehicles must plan around them',
+      'Width limits on some side trails: wide vehicles must plan around them',
       'Shared with cattle, wildlife and full-size traffic on forest roads',
     ],
     season: PAIUTE_SEASON,
@@ -101,7 +101,7 @@ const adventures: Adventure[] = [
       access: 'any_vehicle',
       strength: 'required',
       basis: 'community',
-      notes: 'Marysvale is on US 89. Trail access from town varies by segment and width -- see the network rules.',
+      notes: 'Marysvale is on US 89. Trail access from town varies by segment and width: see the network rules.',
       sources: ['visit_utah', 'visit_utah_beaver_paiute'],
       lastChecked: CHECKED,
     }),
@@ -162,7 +162,7 @@ const adventures: Adventure[] = [
     fees: [
       {
         label: 'Castle Rock & Sam Stowe camping',
-        amount: 'From $15/site/night (primitive) up to $150 (group). Reservations available -- confirm with Utah State Parks.',
+        amount: 'From $15/site/night (primitive) up to $150 (group). Reservations available: confirm with Utah State Parks.',
         sources: ['utah_parks_fremont'],
         lastChecked: CHECKED,
       },
@@ -239,7 +239,7 @@ const adventures: Adventure[] = [
       strength: 'required',
       basis: 'official',
       recommendedEquipment: ['snow_chains'],
-      notes: 'Paved state highway. In winter, traction and tire rules can change with conditions -- check UDOT before driving up.',
+      notes: 'Paved state highway. In winter, traction and tire rules can change with conditions: check UDOT before driving up.',
       conditional: ['Snow and ice in winter.'],
       sources: ['visit_utah_beaver_byway', 'udot'],
       lastChecked: CHECKED,
@@ -251,7 +251,7 @@ const adventures: Adventure[] = [
     stopIds: [],
     campIds: [],
     foodIds: [],
-    why: 'A paved mountain drive from Beaver into the Tushars that works for almost any vehicle in summer -- and for skiers, Eagle Point in winter. It also puts you on the western edge of the Paiute network.',
+    why: 'A paved mountain drive from Beaver into the Tushars that works for almost any vehicle in summer, and for skiers, Eagle Point in winter. It also puts you on the western edge of the Paiute network.',
     highlights: ['Paved mountain byway', 'Eagle Point ski area', 'Paiute access from Beaver'],
     hazards: ['Winter driving conditions'],
     season: {
@@ -333,7 +333,7 @@ export const PAIUTE: RegionPack = {
       ],
       vehicleRules: [
         'Most sections allow full-size vehicles and OHVs 60" or wider.',
-        'Some trails are limited to 60" and some to 50" -- for example the section leaving Beaver to the south (50" ATVs).',
+        'Some trails are limited to 60" and some to 50": for example the section leaving Beaver to the south (50" ATVs).',
         'OHVs need Utah registration or a non-resident permit; Utah requires OHV education for operators.',
       ],
       widthLimitsIn: [50, 60],

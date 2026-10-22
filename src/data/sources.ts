@@ -35,7 +35,7 @@ export const SOURCES: Record<string, Source> = {
   /* ---------------------------------------------------------------- Utah */
   udot: {
     id: 'udot',
-    label: 'UDOT Traffic -- road conditions',
+    label: 'UDOT Traffic: road conditions',
     org: 'Utah Dept. of Transportation',
     url: 'https://udottraffic.utah.gov/',
     kind: 'agency',

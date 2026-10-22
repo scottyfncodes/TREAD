@@ -158,7 +158,7 @@ export function ReadyScreen({ id, stop, go }: { id: string; stop: string | null;
                       <span>
                         {item.label}
                         {item.owned && <span className="chip chip--ok" style={{ marginLeft: 6, minHeight: 22, padding: '0 8px', fontSize: 11 }}>You own this</span>}
-                        {item.note && <span className="faint tiny"> — {item.note}</span>}
+                        {item.note && <span className="faint tiny"> ({item.note})</span>}
                       </span>
                     </label>
                   </li>
@@ -182,7 +182,7 @@ export function ReadyScreen({ id, stop, go }: { id: string; stop: string | null;
                     <input type="checkbox" checked={done} onChange={() => togglePacked(key)} />
                     <span>
                       {item.label}
-                      {item.why && <span className="faint tiny"> — {item.why}</span>}
+                      {item.why && <span className="faint tiny"> ({item.why})</span>}
                     </span>
                   </label>
                 </li>
@@ -201,7 +201,7 @@ export function ReadyScreen({ id, stop, go }: { id: string; stop: string | null;
         </button>
       </div>
       <p className="tiny faint" style={{ marginTop: 10 }}>
-        Readiness reflects what TREAD knows: published requirements, your vehicle profile and the forecast. It is not a guarantee -- conditions on the
+        Readiness reflects what TREAD knows: published requirements, your vehicle profile and the forecast. It is not a guarantee: conditions on the
         ground and the land manager have the final word.
       </p>
     </div>

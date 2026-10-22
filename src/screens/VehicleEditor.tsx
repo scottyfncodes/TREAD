@@ -237,7 +237,7 @@ export function VehicleEditor({ id, go, back }: { id: string | null; go: Go; bac
         </span>
       </h2>
       <p className="tiny faint" style={{ marginTop: -4 }}>
-        Optional. Each one sharpens the vehicle checks -- without them TREAD says "unknown" rather than guessing.
+        Optional. Each one sharpens the vehicle checks: without them TREAD says "unknown" rather than guessing.
       </p>
 
       <details className="more">

@@ -194,7 +194,7 @@ function checkAccess(ctx: Ctx) {
         level: 'caution',
         topic: 'access',
         basis: basisOf(req),
-        text: 'ACCESS STATUS UNKNOWN. No reliable published vehicle requirement -- verify with the land manager before you go.',
+        text: 'ACCESS STATUS UNKNOWN. No reliable published vehicle requirement: verify with the land manager before you go.',
       })
       break
   }
@@ -207,7 +207,7 @@ function checkModified(ctx: Ctx) {
   const hasLockers = cap.lockers.value === 'rear' || cap.lockers.value === 'front_and_rear'
   const tiresOk = cap.offroadTires.value === true
   if (hasLockers && tiresOk) {
-    add(ctx, { level: 'ok', topic: 'stock', basis: 'user', text: 'Lockers and off-road tires entered -- the kind of build this route is described for.' })
+    add(ctx, { level: 'ok', topic: 'stock', basis: 'user', text: 'Lockers and off-road tires entered: the kind of build this route is described for.' })
     return
   }
   const gaps: string[] = []
@@ -338,7 +338,7 @@ function checkRange(ctx: Ctx, roundTripMiles: number | null) {
       level: 'caution',
       topic: 'range',
       basis: 'estimate',
-      text: `About ${Math.round(roundTripMiles)} mi round trip from the gateway (est.) is more than 80% of your ${cap.rangeMiles.value} mi ${kind} range. Plan a ${kind} stop${cap.ev ? ' -- check the AFDC station locator' : ''}.`,
+      text: `About ${Math.round(roundTripMiles)} mi round trip from the gateway (est.) is more than 80% of your ${cap.rangeMiles.value} mi ${kind} range. Plan a ${kind} stop${cap.ev ? ': check the AFDC station locator' : ''}.`,
     })
   } else {
     add(ctx, {
@@ -359,7 +359,7 @@ function checkDifficulty(ctx: Ctx, adventure: Adventure) {
       level: 'info',
       topic: 'difficulty',
       basis: d.basis === 'official' ? 'official' : 'community',
-      text: `Route difficulty remains high -- rated by ${d.ratedBy}. Driver experience matters as much as the vehicle.`,
+      text: `Route difficulty remains high: rated by ${d.ratedBy}. Driver experience matters as much as the vehicle.`,
     })
   }
 }

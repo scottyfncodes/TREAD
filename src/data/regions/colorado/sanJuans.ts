@@ -32,7 +32,7 @@ export const SAN_JUANS: RegionPack = {
   "conditionsUrl": "https://www.fs.usda.gov/r02/sanjuan/alerts",
   "conditionsLabel": "San Juan NF alerts & closures",
   "notes": [
-    "US 550 crosses three high passes; CDOT closes it for avalanche control and crashes -- check COtrip.",
+    "US 550 crosses three high passes; CDOT closes it for avalanche control and crashes: check COtrip.",
     "Check Colorado fire restrictions before camping."
   ],
   "sources": [
@@ -139,14 +139,14 @@ export const SAN_JUANS: RegionPack = {
       "carver",
       "animas_brewing"
     ],
-    "why": "One of the highest-payoff hiking days in the San Juans. You climb 2,400-odd feet out of spruce into a basin of turquoise lakes at 12,000 ft, and the road in is ordinary gravel -- no special vehicle needed to reach the trailhead.",
+    "why": "One of the highest-payoff hiking days in the San Juans. You climb 2,400-odd feet out of spruce into a basin of turquoise lakes at 12,000 ft, and the road in is ordinary gravel: no special vehicle needed to reach the trailhead.",
     "highlights": [
       "Lower and upper basins, plus Island Lake if the legs are willing",
       "Wildflower display that is genuinely nationally known, often peaking mid-to-late July",
       "Trailhead at 9,800 ft means the altitude work starts immediately"
     ],
     "hazards": [
-      "Above treeline for hours -- be off the high ground before afternoon storms build",
+      "Above treeline for hours: be off the high ground before afternoon storms build",
       "Parking fills early on summer weekends",
       "Silverton has no brewpub since Avalanche closed; the beer is on the Durango end"
     ],
@@ -209,7 +209,7 @@ export const SAN_JUANS: RegionPack = {
         "miles": null,
         "roadClass": "technical_4wd",
         "vehicle": "four_wd_low_range",
-        "notes": "BLM states the two 12,000 ft passes require high-clearance 4WD. Leg length not verified -- the app is not going to make one up.",
+        "notes": "BLM states the two 12,000 ft passes require high-clearance 4WD. Leg length not verified: the app is not going to make one up.",
         "sources": [
           "blm_alpine_loop"
         ],
@@ -266,7 +266,7 @@ export const SAN_JUANS: RegionPack = {
       "steamworks",
       "animas_brewing"
     ],
-    "why": "About two-thirds of the Alpine Loop is graded gravel most vehicles can manage. The last third, to Engineer Pass at 12,800 ft, is where the BLM’s high-clearance 4WD requirement applies -- with a ghost town on the way up.",
+    "why": "About two-thirds of the Alpine Loop is graded gravel most vehicles can manage. The last third, to Engineer Pass at 12,800 ft, is where the BLM’s high-clearance 4WD requirement applies, with a ghost town on the way up.",
     "highlights": [
       "Animas Forks: seven BLM-stabilised buildings at about 11,200 ft",
       "Engineer Pass at 12,800 ft, with Cinnamon Pass at 12,640 ft as the extension toward Lake City",
@@ -373,7 +373,7 @@ export const SAN_JUANS: RegionPack = {
     ],
     "hazards": [
       "The summit route leaves the trail and has about 50 ft of real exposure at the crux",
-      "Fully exposed plateau -- weather is the whole game up there"
+      "Fully exposed plateau: weather is the whole game up there"
     ],
     "season": {
       "months": [
@@ -465,15 +465,15 @@ export const SAN_JUANS: RegionPack = {
       "steamworks",
       "animas_brewing"
     ],
-    "why": "The only trail into the West Needle Mountains section of the Weminuche. Eleven miles round trip but only about 870 ft of net gain -- a distance day rather than a climbing day, from a paved trailhead any vehicle can reach.",
+    "why": "The only trail into the West Needle Mountains section of the Weminuche. Eleven miles round trip but only about 870 ft of net gain: a distance day rather than a climbing day, from a paved trailhead any vehicle can reach.",
     "highlights": [
       "Twilight Peak and the Needles across the basin",
-      "Paved trailhead at 10,770 ft -- no approach road problem at all",
+      "Paved trailhead at 10,770 ft: no approach road problem at all",
       "Molas Pass overlook is on the way and costs you fifteen minutes"
     ],
     "hazards": [
       "Rolling terrain: the return is not downhill, and the mileage catches people out",
-      "Wilderness area -- no bikes, no motors, and the rules are enforced"
+      "Wilderness area: no bikes, no motors, and the rules are enforced"
     ],
     "season": {
       "months": [
@@ -532,7 +532,7 @@ export const SAN_JUANS: RegionPack = {
         "miles": 0.7,
         "roadClass": "high_clearance",
         "vehicle": "four_wd",
-        "notes": "Steeper and looser from roughly the 4-mile point. Parking at the 2WD area instead adds about 1.4 mi round trip on foot -- a fair trade if conditions look bad.",
+        "notes": "Steeper and looser from roughly the 4-mile point. Parking at the 2WD area instead adds about 1.4 mi round trip on foot: a fair trade if conditions look bad.",
         "sources": [
           "durango_trails"
         ],
@@ -722,7 +722,7 @@ export const SAN_JUANS: RegionPack = {
     "hazards": [
       "Steep drop-offs on the upper road; this is the part that wants a driver who is paying attention",
       "You arrive at 11,600 ft with zero acclimatisation runway",
-      "Mixed private and public land in the canyon -- posted parcels are real"
+      "Mixed private and public land in the canyon: posted parcels are real"
     ],
     "season": {
       "months": [
@@ -938,7 +938,7 @@ export const SAN_JUANS: RegionPack = {
     "fees": [
       {
         "label": "Mesa Verde National Park entrance",
-        "amount": "Entrance fee applies; ranger-led dwelling tours need tickets -- confirm with NPS.",
+        "amount": "Entrance fee applies; ranger-led dwelling tours need tickets: confirm with NPS.",
         "sources": [
           "nps_meve_fees"
         ],
@@ -958,14 +958,14 @@ export const SAN_JUANS: RegionPack = {
       "mancos_brewing",
       "carver"
     ],
-    "why": "Cliff dwellings and a short, genuinely interesting trail to rock art. The paved park road makes this a full day whether you want it to be or not -- and any street-legal vehicle can do it.",
+    "why": "Cliff dwellings and a short, genuinely interesting trail to rock art. The paved park road makes this a full day whether you want it to be or not, and any street-legal vehicle can do it.",
     "highlights": [
       "Chapin Mesa museum, cliff dwelling overlooks and mesa-top loops",
       "Petroglyph Point trail: 2.4 miles, with a trailhead register",
       "Mancos Brewing on the return leg"
     ],
     "hazards": [
-      "Ranger-led dwelling tours need tickets and sell out -- sort that before you drive",
+      "Ranger-led dwelling tours need tickets and sell out: sort that before you drive",
       "Dogs are not allowed on park trails",
       "Entrance fee applies; confirm the current amount with NPS"
     ],
@@ -979,7 +979,7 @@ export const SAN_JUANS: RegionPack = {
         9,
         10
       ],
-      "note": "Road and facility seasons vary through the year -- confirm with the park before driving out.",
+      "note": "Road and facility seasons vary through the year: confirm with the park before driving out.",
       "confidence": "reported",
       "sources": [
         "nps_meve"
@@ -1019,7 +1019,7 @@ export const SAN_JUANS: RegionPack = {
     ],
     "wilderness": null,
     "dogs": "unknown",
-    "permits": "No permit required as of last check. A permit system has been publicly discussed for this basin -- confirm with San Juan NF before you go.",
+    "permits": "No permit required as of last check. A permit system has been publicly discussed for this basin: confirm with San Juan NF before you go.",
     "parking": {
       "spaces": null,
       "notes": "Lot at the end of South Mineral Road (FR 585) by South Mineral Campground. Widely reported to fill early on summer weekends.",
@@ -1069,7 +1069,7 @@ export const SAN_JUANS: RegionPack = {
     "ratedDifficulty": null,
     "hazards": [
       "The summit push leaves the trail; roughly 50 ft of genuinely exposed scrambling at the crux",
-      "The meadow and plateau are fully above treeline -- no shelter from storms"
+      "The meadow and plateau are fully above treeline: no shelter from storms"
     ],
     "wilderness": null,
     "dogs": "unknown",
@@ -1118,7 +1118,7 @@ export const SAN_JUANS: RegionPack = {
     "highPointFt": 11640,
     "ratedDifficulty": null,
     "hazards": [
-      "Long day at altitude even though the net gain is modest -- the first two miles do most of the climbing",
+      "Long day at altitude even though the net gain is modest: the first two miles do most of the climbing",
       "Rolling terrain means the return is not all downhill"
     ],
     "wilderness": "Weminuche Wilderness (West Needle Mountains)",
@@ -1175,7 +1175,7 @@ export const SAN_JUANS: RegionPack = {
     "ratedDifficulty": null,
     "hazards": [
       "Steep grades and frequent stream crossings",
-      "Open tundra above the lakes -- fast-moving weather with nowhere to hide",
+      "Open tundra above the lakes: fast-moving weather with nowhere to hide",
       "Route-finding on the Continental Divide loop variant"
     ],
     "wilderness": "Weminuche Wilderness",
@@ -1229,7 +1229,7 @@ export const SAN_JUANS: RegionPack = {
     "highPointFt": 12000,
     "ratedDifficulty": null,
     "hazards": [
-      "Starts at 11,600 ft -- no acclimatisation runway at all",
+      "Starts at 11,600 ft: no acclimatisation runway at all",
       "Entirely above or near treeline; storms arrive fast",
       "Getting back down the 4WD road matters as much as the hike"
     ],
@@ -1283,11 +1283,11 @@ export const SAN_JUANS: RegionPack = {
     ],
     "wilderness": null,
     "dogs": "prohibited",
-    "permits": "Trail register required at the trailhead. Park entrance fee applies -- check current fees with NPS.",
+    "permits": "Trail register required at the trailhead. Park entrance fee applies: check current fees with NPS.",
     "parking": {
       "spaces": null,
       "notes": "Chapin Mesa museum area parking.",
-      "fee": "Park entrance fee applies -- amount not verified here, see NPS fees page.",
+      "fee": "Park entrance fee applies: amount not verified here, see NPS fees page.",
       "finalApproach": "any_vehicle",
       "sources": [
         "nps_meve",
@@ -1347,7 +1347,7 @@ export const SAN_JUANS: RegionPack = {
       "lastChecked": "2026-09-18"
     },
     "restrictions": [
-      "All sites first-come, first-served -- no reservations taken",
+      "All sites first-come, first-served: no reservations taken",
       "One of the busiest campgrounds in the forest; arriving late on a summer weekend is a gamble"
     ],
     "lat": 37.8072,
@@ -1358,7 +1358,7 @@ export const SAN_JUANS: RegionPack = {
     ],
     "lastChecked": "2026-09-18",
     "fee": "$20/night",
-    "vehicleFitNotes": "Reached by graded gravel (FR 585); sites are vehicle-accessible, which suits a rooftop tent. Levelness varies site to site -- not verified.",
+    "vehicleFitNotes": "Reached by graded gravel (FR 585); sites are vehicle-accessible, which suits a rooftop tent. Levelness varies site to site, not verified.",
     "regionId": "co_san_juans"
   },
   {
@@ -1416,7 +1416,7 @@ export const SAN_JUANS: RegionPack = {
         8,
         9
       ],
-      "note": "Season not verified here -- check with San Juan NF.",
+      "note": "Season not verified here: check with San Juan NF.",
       "confidence": "unknown",
       "sources": [
         "sjnf"
@@ -1459,7 +1459,7 @@ export const SAN_JUANS: RegionPack = {
       "lastChecked": "2026-09-18"
     },
     "restrictions": [
-      "Dispersed camping rules, stay limits and designated-site requirements change -- read the signs at the road junction, they are the authority",
+      "Dispersed camping rules, stay limits and designated-site requirements change: read the signs at the road junction, they are the authority",
       "Fire restrictions change through the season; check before you strike a match"
     ],
     "lat": 37.8095,
@@ -1482,7 +1482,7 @@ export const SAN_JUANS: RegionPack = {
     "reservationUrl": null,
     "elevationFt": 9000,
     "access": "high_clearance",
-    "water": "La Plata River. Historic mining district upstream -- treat, and think about it.",
+    "water": "La Plata River. Historic mining district upstream: treat, and think about it.",
     "season": {
       "months": [
         6,
@@ -1500,7 +1500,7 @@ export const SAN_JUANS: RegionPack = {
       "lastChecked": "2026-09-18"
     },
     "restrictions": [
-      "Mixed private and public land in the canyon -- private parcels are real and posted",
+      "Mixed private and public land in the canyon: private parcels are real and posted",
       "Read the signs at the pullout; designated-dispersed rules apply in places"
     ],
     "lat": 37.3862,
@@ -1530,7 +1530,7 @@ export const SAN_JUANS: RegionPack = {
         8,
         9
       ],
-      "note": "Short high-country season. Camping rules here have changed over the years -- verify current status with San Juan NF.",
+      "note": "Short high-country season. Camping rules here have changed over the years: verify current status with San Juan NF.",
       "confidence": "unknown",
       "sources": [
         "sjnf"
@@ -1538,7 +1538,7 @@ export const SAN_JUANS: RegionPack = {
       "lastChecked": "2026-09-18"
     },
     "restrictions": [
-      "Camping status and stay limits near Molas Pass have been adjusted in recent years -- do not assume, check"
+      "Camping status and stay limits near Molas Pass have been adjusted in recent years: do not assume, check"
     ],
     "lat": 37.7444,
     "lon": -107.7203,
@@ -1547,7 +1547,7 @@ export const SAN_JUANS: RegionPack = {
     ],
     "lastChecked": "2026-09-18",
     "fee": null,
-    "vehicleFitNotes": "High, open and exposed at about 10,900 ft -- superb stars, genuinely cold nights, and wind is the variable that ruins it.",
+    "vehicleFitNotes": "High, open and exposed at about 10,900 ft: superb stars, genuinely cold nights, and wind is the variable that ruins it.",
     "regionId": "co_san_juans"
   }
 ],
@@ -1596,7 +1596,7 @@ export const SAN_JUANS: RegionPack = {
     "address": "1022 Main Ave, Durango, CO 81301",
     "url": "https://carverbrewing.com/",
     "phone": null,
-    "hoursNote": "Hours not verified. Carver also does breakfast -- useful on the way out, not just back.",
+    "hoursNote": "Hours not verified. Carver also does breakfast: useful on the way out, not just back.",
     "closed": null,
     "lat": 37.274,
     "lon": -107.8805,
@@ -1667,7 +1667,7 @@ export const SAN_JUANS: RegionPack = {
     "name": "Animas Forks ghost town",
     "kind": "ghost_town",
     "dwellMinutes": 45,
-    "blurb": "One of the highest mining camps in North America, founded 1875 and empty by the 1920s. Seven buildings have been stabilised by the BLM and the San Juan County Historical Society -- new roofs, windows, doors and drainage, so what you walk through is standing on purpose.",
+    "blurb": "One of the highest mining camps in North America, founded 1875 and empty by the 1920s. Seven buildings have been stabilised by the BLM and the San Juan County Historical Society: new roofs, windows, doors and drainage, so what you walk through is standing on purpose.",
     "lat": 37.9294,
     "lon": -107.5717,
     "elevationFt": {
@@ -1699,7 +1699,7 @@ export const SAN_JUANS: RegionPack = {
     "name": "Ophir Pass summit",
     "kind": "overlook",
     "dwellMinutes": 20,
-    "blurb": "About 11,800 ft on a shelf road above the Upper Ophir valley. Loose rock, steep grades and a narrow shelf on the Ophir side -- the exposure, not the traction, is the story.",
+    "blurb": "About 11,800 ft on a shelf road above the Upper Ophir valley. Loose rock, steep grades and a narrow shelf on the Ophir side: the exposure, not the traction, is the story.",
     "lat": 37.8514,
     "lon": -107.7897,
     "elevationFt": 11800,
@@ -1727,7 +1727,7 @@ export const SAN_JUANS: RegionPack = {
     "name": "Silverton",
     "kind": "town",
     "dwellMinutes": 45,
-    "blurb": "A 9,300 ft mining town at the head of the Animas, and the hinge every San Juan route turns on. Note: Avalanche Brewing, the long-standing brewpub here, is reported permanently closed -- do not plan the beer stop around it.",
+    "blurb": "A 9,300 ft mining town at the head of the Animas, and the hinge every San Juan route turns on. Note: Avalanche Brewing, the long-standing brewpub here, is reported permanently closed. Do not plan the beer stop around it.",
     "lat": 37.8119,
     "lon": -107.6645,
     "elevationFt": 9318,
@@ -1742,7 +1742,7 @@ export const SAN_JUANS: RegionPack = {
     "name": "Red Mountain mining district",
     "kind": "mine",
     "dwellMinutes": 30,
-    "blurb": "The oxidised red slopes and surviving headframes between Silverton and Ouray on US 550 -- among the most photographed industrial ruins in Colorado, visible from the highway.",
+    "blurb": "The oxidised red slopes and surviving headframes between Silverton and Ouray on US 550, among the most photographed industrial ruins in Colorado, visible from the highway.",
     "lat": 37.8969,
     "lon": -107.7117,
     "elevationFt": 11018,
@@ -1754,10 +1754,10 @@ export const SAN_JUANS: RegionPack = {
   },
   {
     "id": "mesa_verde_chapin",
-    "name": "Mesa Verde -- Chapin Mesa",
+    "name": "Mesa Verde: Chapin Mesa",
     "kind": "historic",
     "dwellMinutes": 180,
-    "blurb": "Cliff dwellings, the museum and the mesa-top loops. The drive in from the entrance is long and slow by design -- budget for it.",
+    "blurb": "Cliff dwellings, the museum and the mesa-top loops. The drive in from the entrance is long and slow by design: budget for it.",
     "lat": 37.1836,
     "lon": -108.4879,
     "elevationFt": 6900,
@@ -1785,7 +1785,7 @@ export const SAN_JUANS: RegionPack = {
     "name": "La Plata Canyon mining remains",
     "kind": "mine",
     "dwellMinutes": 30,
-    "blurb": "Scattered mill and mine remains up the canyon toward Kennebec. Mixed private and public ground -- look from the road, the posting is real.",
+    "blurb": "Scattered mill and mine remains up the canyon toward Kennebec. Mixed private and public ground: look from the road, the posting is real.",
     "lat": 37.3862,
     "lon": -108.0503,
     "elevationFt": 9000,

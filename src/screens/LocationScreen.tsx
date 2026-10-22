@@ -67,7 +67,7 @@ export function LocationScreen({ back }: { go: Go; back: () => void }) {
       <BackLink onClick={back} />
       <h1 className="display">Starting location</h1>
       <p className="tiny faint" style={{ margin: '6px 0 14px' }}>
-        Where your trips begin. TREAD never assumes this -- it stays empty until you choose, and you can change it any time.
+        Where your trips begin. TREAD never assumes this: it stays empty until you choose, and you can change it any time.
       </p>
 
       <div className={start ? 'card card--brand' : 'card card--flat'}>
@@ -91,7 +91,7 @@ export function LocationScreen({ back }: { go: Go; back: () => void }) {
           </>
         ) : (
           <p className="small muted" style={{ margin: '6px 0 0' }}>
-            Not set. Adventures still work -- plans begin at each area’s gateway town until you choose a start.
+            Not set. Adventures still work: plans begin at each area’s gateway town until you choose a start.
           </p>
         )}
       </div>

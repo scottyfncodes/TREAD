@@ -51,7 +51,7 @@ export function VehicleFit({ assessment, vehicleLabel, onAddDetails }: { assessm
         </button>
       )}
       <p className="tiny faint" style={{ margin: '10px 0 0' }}>
-        TREAD compares published requirements with what is known about your vehicle. It cannot tell you a route is safe -- conditions, driving and
+        TREAD compares published requirements with what is known about your vehicle. It cannot tell you a route is safe: conditions, driving and
         the land manager decide that.
       </p>
     </section>

@@ -36,7 +36,6 @@ export type CategoryId =
 export interface Category {
   id: CategoryId
   label: string
-  emoji: string
   blurb: string
 }
 

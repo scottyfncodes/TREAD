@@ -277,7 +277,7 @@ export function TripScreen({ id, go, back }: { id: string; go: Go; back: () => v
                   <li key={s.adventure.id} style={{ display: 'grid', gridTemplateColumns: '22px 1fr', gap: 8 }}>
                     <Mark level={s.assessment.status === 'compatible' ? 'ok' : s.assessment.status === 'beyond' ? 'blocker' : s.assessment.status === 'considerations' ? 'caution' : 'unknown'} />
                     <span>
-                      <strong>{s.adventure.name}</strong> — {FIT_LABEL[s.assessment.status]}
+                      <strong>{s.adventure.name}</strong>: {FIT_LABEL[s.assessment.status]}
                     </span>
                   </li>
                 ))}

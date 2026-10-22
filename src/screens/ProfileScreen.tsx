@@ -39,12 +39,12 @@ export function ProfileScreen({ go }: { go: Go }) {
       </div>
 
       <SectionTitle>Driving</SectionTitle>
-      <Field label={`Longest one-way drive for a day trip — ${Math.floor(prefs.maxDriveMinutes / 60)}h ${String(prefs.maxDriveMinutes % 60).padStart(2, '0')}m`}>
+      <Field label={`Longest one-way drive for a day trip: ${Math.floor(prefs.maxDriveMinutes / 60)}h ${String(prefs.maxDriveMinutes % 60).padStart(2, '0')}m`}>
         <input type="range" min="30" max="480" step="15" value={prefs.maxDriveMinutes} onChange={(e) => set({ maxDriveMinutes: Number(e.target.value) })} aria-label="Longest one-way drive" />
       </Field>
 
       <SectionTitle>On foot</SectionTitle>
-      <Field label={`Flat-ground walking pace — ${prefs.paceMph} mph`} help="Every hiking time comes from this, plus a climbing penalty and a thin-air allowance above 10,000 ft.">
+      <Field label={`Flat-ground walking pace: ${prefs.paceMph} mph`} help="Every hiking time comes from this, plus a climbing penalty and a thin-air allowance above 10,000 ft.">
         <input type="range" min="1.2" max="3.6" step="0.1" value={prefs.paceMph} onChange={(e) => set({ paceMph: Number(e.target.value) })} aria-label="Walking pace" />
       </Field>
       <Segmented
@@ -80,7 +80,7 @@ export function ProfileScreen({ go }: { go: Go }) {
           const on = prefs.interests.includes(c.id)
           return (
             <button key={c.id} type="button" className="chip" aria-pressed={on} onClick={() => set({ interests: on ? prefs.interests.filter((i) => i !== c.id) : [...prefs.interests, c.id] })}>
-              <span aria-hidden="true">{c.emoji}</span> {c.label}
+              {c.label}
             </button>
           )
         })}
@@ -92,7 +92,7 @@ export function ProfileScreen({ go }: { go: Go }) {
       <SectionTitle>How TREAD knows things</SectionTitle>
       <div className="card card--flat small muted">
         <p>
-          Access, closures, fees and vehicle requirements come from land managers first -- {agencies} agency sources. Club and community guides ({community}{' '}
+          Access, closures, fees and vehicle requirements come from land managers first: {agencies} agency sources. Club and community guides ({community}{' '}
           sources) add route character and are always labelled as community information.
         </p>
         <p>

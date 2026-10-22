@@ -84,7 +84,7 @@ export function buildReadiness(input: ReadinessInput): Readiness {
   /* Fuel / charge */
   const energy = energyRow(vehicle, needed, input.now ?? Date.now())
   if (itinerary.transitOneWayMiles > 0) {
-    energy.detail += ` Getting to the gateway is about ${itinerary.transitOneWayMiles} mi each way (est.) -- plan ${vehicle && capabilitiesOf(vehicle).ev ? 'charging' : 'fuel'} stops for that drive.`
+    energy.detail += ` Getting to the gateway is about ${itinerary.transitOneWayMiles} mi each way (est.): plan ${vehicle && capabilitiesOf(vehicle).ev ? 'charging' : 'fuel'} stops for that drive.`
   }
   rows.push(energy)
 
@@ -101,8 +101,8 @@ export function buildReadiness(input: ReadinessInput): Readiness {
       value: bits.join(' · '),
       status: storms || wet || hot ? 'caution' : 'ok',
       detail: [
-        storms ? 'Thunderstorms forecast -- flash floods and lightning on exposed ground.' : '',
-        wet ? `${Math.round(weather.precipChance ?? 0)}% chance of precipitation -- dirt and clay roads can become impassable.` : '',
+        storms ? 'Thunderstorms forecast: flash floods and lightning on exposed ground.' : '',
+        wet ? `${Math.round(weather.precipChance ?? 0)}% chance of precipitation: dirt and clay roads can become impassable.` : '',
         hot ? 'Extreme heat: carry extra water for people and vehicle.' : '',
         'Forecast for the destination. Weather is an input, not a verdict.',
       ]
@@ -195,7 +195,7 @@ export function buildReadiness(input: ReadinessInput): Readiness {
       status: 'info',
       detail: [
         camp?.fee ? `Fee: ${camp.fee}.` : 'Fee not recorded.',
-        sleeps ? 'Your vehicle is set up to sleep in or on.' : 'Bring a tent -- this vehicle isn’t recorded as sleeping-capable.',
+        sleeps ? 'Your vehicle is set up to sleep in or on.' : 'Bring a tent: this vehicle isn’t recorded as sleeping-capable.',
         'Camping rules and fire restrictions are set on site by the land manager.',
       ].join(' '),
     })
@@ -280,6 +280,6 @@ function energyRow(vehicle: VehicleProfile | null, needed: number | null, now: n
     label,
     value: pct,
     status: enough ? (stale ? 'caution' : 'ok') : 'caution',
-    detail: `About ${Math.round(available)} mi available (est. from your ${cap.rangeMiles.value} mi range) vs about ${needed} mi for this plan (est.).${enough ? '' : ` Plan to ${cap.ev ? 'charge' : 'refuel'} on the way -- ${cap.ev ? 'check the AFDC station locator' : 'confirm your last fuel stop'}.`}${stale ? ' Level was entered more than two days ago.' : ''}`,
+    detail: `About ${Math.round(available)} mi available (est. from your ${cap.rangeMiles.value} mi range) vs about ${needed} mi for this plan (est.).${enough ? '' : ` Plan to ${cap.ev ? 'charge' : 'refuel'} on the way: ${cap.ev ? 'check the AFDC station locator' : 'confirm your last fuel stop'}.`}${stale ? ' Level was entered more than two days ago.' : ''}`,
   }
 }

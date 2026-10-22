@@ -80,17 +80,17 @@ export function RegionScreen({ id, go, back }: { id: string; go: Go; back: () =>
           <dl className="kv">
             <dt>Main</dt>
             <dd>
-              {formatMeasure(n.mainRouteMiles, 'mi')} — {n.mainRouteNote}
+              {formatMeasure(n.mainRouteMiles, 'mi')}: {n.mainRouteNote}
             </dd>
             <dt>Connected</dt>
             <dd>
-              {formatMeasure(n.connectedMiles, 'mi')} — {n.connectedNote}
+              {formatMeasure(n.connectedMiles, 'mi')}: {n.connectedNote}
             </dd>
             <dt>Access towns</dt>
             <dd>{n.accessCommunityIds.map((g) => GATEWAYS_BY_ID[g]?.name).filter(Boolean).join(', ')}</dd>
             <dt>Season</dt>
             <dd>
-              {formatSeasonMonths(n.season)} — {n.season.note}
+              {formatSeasonMonths(n.season)}: {n.season.note}
             </dd>
             {n.widthLimitsIn.length > 0 && (
               <>

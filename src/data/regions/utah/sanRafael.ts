@@ -22,7 +22,7 @@ const SWELL_SEASON: SeasonWindow = {
   lastChecked: CHECKED,
 }
 
-const WET_CLAY = 'Clay and dirt roads in the Swell can become impassable when wet -- do not attempt after rain.'
+const WET_CLAY = 'Clay and dirt roads in the Swell can become impassable when wet: do not attempt after rain.'
 const BLM_SRS = 'https://www.blm.gov/visit/san-rafael-swell-recreation-area'
 
 const TEMPLE_MOUNTAIN_ROAD = {
@@ -39,7 +39,7 @@ const adventures: Adventure[] = [
   {
     id: 'swell_network',
     name: 'San Rafael Swell route network',
-    tagline: '1,355 miles of designated motorized routes -- and the map changed in 2024',
+    tagline: '1,355 miles of designated motorized routes, and the map changed in 2024',
     kind: 'network',
     regionId: 'ut_san_rafael',
     networkId: 'srs_designated_routes',
@@ -52,7 +52,7 @@ const adventures: Adventure[] = [
         miles: null,
         roadClass: 'paved_highway',
         vehicle: 'any_vehicle',
-        notes: 'I-70 crosses the middle of the Swell. Services are sparse -- confirm your last fuel stop before leaving the interstate.',
+        notes: 'I-70 crosses the middle of the Swell. Services are sparse: confirm your last fuel stop before leaving the interstate.',
         sources: ['blm_srs'],
         lastChecked: CHECKED,
       },
@@ -93,7 +93,7 @@ const adventures: Adventure[] = [
       'The San Rafael Reef: a 75-mile spine of sandstone up to 1,000 ft high',
     ],
     hazards: [
-      'Route designations changed in December 2024 and remain contested -- verify the current map',
+      'Route designations changed in December 2024 and remain contested: verify the current map',
       'Remote: long distances between services',
       'Flash floods in narrow canyons',
     ],
@@ -167,7 +167,7 @@ const adventures: Adventure[] = [
     foodIds: [],
     why: 'The easiest way into the Swell that still feels like the Swell. A crossover or a sedan with sensible tires can do it in dry weather, and the reward is Barrier Canyon-style pictographs and the historic swinging bridge over the San Rafael River.',
     highlights: [
-      'Buckhorn Wash pictograph panel -- one of the finest Barrier Canyon-style panels',
+      'Buckhorn Wash pictograph panel: one of the finest Barrier Canyon-style panels',
       'Historic swinging bridge over the San Rafael River',
       'Connects to the Wedge Overlook',
     ],
@@ -274,7 +274,7 @@ const adventures: Adventure[] = [
   {
     id: 'behind_the_reef',
     name: 'Behind the Reef',
-    tagline: 'Along the back of the San Rafael Reef -- narrowing to 50 inches',
+    tagline: 'Along the back of the San Rafael Reef: narrowing to 50 inches',
     kind: 'ohv_route',
     regionId: 'ut_san_rafael',
     networkId: 'srs_designated_routes',
@@ -361,7 +361,7 @@ const adventures: Adventure[] = [
     stopIds: [],
     campIds: [],
     foodIds: [],
-    why: 'A distinctive sandstone dome visible from the Ghost Rock area of I-70. Included because it is popular -- and because its access is a clear example of information that has changed and must be verified.',
+    why: 'A distinctive sandstone dome visible from the Ghost Rock area of I-70. Included because it is popular, and because its access is a clear example of information that has changed and must be verified.',
     highlights: ['Walk the closed ATV road to the south side of the tower'],
     hazards: ['Access status unclear; do not drive closed routes', 'Poorly marked roads'],
     season: SWELL_SEASON,
@@ -396,14 +396,14 @@ const adventures: Adventure[] = [
       access: 'any_vehicle',
       strength: 'required',
       basis: 'official',
-      notes: 'State park road. OHV rules inside and around the park are set by Utah State Parks -- see their OHV page.',
+      notes: 'State park road. OHV rules inside and around the park are set by Utah State Parks: see their OHV page.',
       sources: ['utah_parks_goblin'],
       lastChecked: CHECKED,
     }),
     fees: [
       {
         label: 'Goblin Valley State Park',
-        amount: 'Day-use and camping fees apply -- confirm with Utah State Parks.',
+        amount: 'Day-use and camping fees apply: confirm with Utah State Parks.',
         sources: ['utah_parks_goblin'],
         lastChecked: CHECKED,
       },
@@ -490,7 +490,7 @@ export const SAN_RAFAEL: RegionPack = {
       elevationFt: null,
       access: 'any_vehicle',
       vehicleFitNotes: 'Sites along the graded Buckhorn Draw road; sizes for large rigs not verified.',
-      water: 'Not recorded -- bring your own.',
+      water: 'Not recorded: bring your own.',
       season: SWELL_SEASON,
       restrictions: ['Camp in designated sites'],
       lat: 39.12,

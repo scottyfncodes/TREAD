@@ -350,7 +350,7 @@ export function AdventureScreen({ id, go, back }: { id: string; go: Go; back: ()
               {food.address ? ` · ${food.address}` : ''}
             </p>
             <p className="tiny" style={{ color: 'var(--caution)' }}>
-              {food.hoursNote ?? 'Hours not verified.'} Hours change -- this app does not treat them as fact.
+              {food.hoursNote ?? 'Hours not verified.'} Hours change: this app does not treat them as fact.
             </p>
             <SourceLine ids={food.sources} lastChecked={food.lastChecked} />
           </div>

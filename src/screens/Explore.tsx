@@ -32,7 +32,7 @@ export function Explore({ go, category }: { go: Go; category: string | null }) {
   return (
     <div>
       <h1 className="display" style={{ marginTop: 10 }}>
-        {cat ? `${CATEGORY_BY_ID[cat].emoji} ${CATEGORY_BY_ID[cat].label}` : 'Explore'}
+        {cat ? CATEGORY_BY_ID[cat].label : 'Explore'}
       </h1>
       <p className="tiny faint" style={{ margin: '4px 0 0' }}>
         {cat ? CATEGORY_BY_ID[cat].blurb : 'Every adventure, checked against your vehicle.'}
@@ -45,7 +45,7 @@ export function Explore({ go, category }: { go: Go; category: string | null }) {
         </button>
         {CATEGORIES.map((c) => (
           <button key={c.id} type="button" className="chip" aria-pressed={cat === c.id} onClick={() => go(`explore/${c.id}`)}>
-            <span aria-hidden="true">{c.emoji}</span> {c.label}
+            {c.label}
           </button>
         ))}
       </div>
@@ -91,7 +91,7 @@ export function Explore({ go, category }: { go: Go; category: string | null }) {
               </h3>
               {f.address && <p className="tiny muted" style={{ margin: '4px 0' }}>{f.address}</p>}
               <p className="tiny" style={{ color: 'var(--caution)', margin: '4px 0' }}>
-                {f.hoursNote ?? 'Hours not verified.'} Hours change -- check before you go.
+                {f.hoursNote ?? 'Hours not verified.'} Hours change: check before you go.
               </p>
               {f.url && (
                 <a className="chip" href={f.url} target="_blank" rel="noreferrer noopener">

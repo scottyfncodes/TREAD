@@ -142,12 +142,10 @@ export function Home({ go }: { go: Go }) {
 
       <SectionTitle>Explore by type</SectionTitle>
       <div className="cat-grid">
-        {CATEGORIES.slice(0, 9).map((c) => (
+        {CATEGORIES.slice(0, 8).map((c) => (
           <button key={c.id} type="button" className="cat" onClick={() => go(`explore/${c.id}`)}>
-            <span className="cat__emoji" aria-hidden="true">
-              {c.emoji}
-            </span>
-            {c.label}
+            <span className="cat__label">{c.label}</span>
+            <span className="cat__blurb">{c.blurb}</span>
           </button>
         ))}
       </div>
